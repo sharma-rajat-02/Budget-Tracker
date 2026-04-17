@@ -239,9 +239,11 @@ let nid   = parseInt(localStorage.getItem('gtv2_nid')||'1');
 let selDay = todayStr();
 let viewMonth = {y: new Date().getFullYear(), m: new Date().getMonth()};
 
-function classify(n){
-  const s=n.toLowerCase();
-  for(const[k,ws]of Object.entries(CLS)){if(ws.some(w=>s.includes(w)))return k;}
+function classify(n) {
+  const s = n.toLowerCase();
+  for (const [k, ws] of Object.entries(CLS)) {
+    if (ws.some(w => s.includes(w))) return k;
+  }
   return 'grocery';
 }
 
